@@ -299,13 +299,11 @@
 
 </script>
 <script>
-    console.log(repartos.repartos)
     function repartosHandler(repartos) {
         const tablaPrincipal = document.querySelector('.tablaprincipal')
         repartos.repartos.forEach(reparto => {
             let repartoId = document.createElement('tr')
-            repartoId.className = 'repartoid'
-            console.log("eaaaaaaaaa     ")
+            repartoId.className = 'repartoid'   
             let idNumerica = document.createElement('th')
             idNumerica.innerHTML = `<strong>REPARTO:</strong><strong>${reparto.id}</strong>`
             repartoId.append(idNumerica)
