@@ -1,50 +1,65 @@
-.contenedorsupremo {
-    width: 195mm;
-    height: 280mm;
+html, body {
+    font-size: 12px;
+}
+
+.a4 {
+    height: 210mm;
+    width: 297mm;
+    border: 1mm solid #000;
+    margin: 0 auto;
 }
 
 table {
-    width: 195mm;
     border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
 }
 
-table {
-    border: 1px solid #333;
+h1 {
+    width: 100%;
+    border-bottom: 2px solid #000;
+    margin-top: 0;
+    text-align: left;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
 
+h2 {
+    width: 100%;
+    margin-top: 0;
+    text-align: left;
+    font-size: 1em;
+    margin-bottom: .5em;
+}
+
+h3 {
+    width: 100%;
+    margin-top: 0;
+    text-align: left;
+    font-size: .9em;
+    margin-bottom: .5em;
+}
+
+h4 {
+    width: 100%;
+    margin-top: 0;
+    text-align: left;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+tr:last-child > td {
+    border-bottom: none;
 }
 
 td {
-    border-top: 1px solid #333;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    padding: .5em;
 }
 
 th {
-    padding-left: 18px;
-    padding-right: 18px;
-}
-
-thead, tfoot {
-    background-color: #333;
-    color: #fff;
-}
-
-.titulo {
-    text-align: center;
-    border: #000 1px solid;
-    width: 221mm;
-}
-
-.cabecera {
-    border-bottom: #000 3px solid;
-}
-.total-reparto{
-    border-bottom: #000 3px solid;
-    
-}
-.totales{
-    font-size: 20px;
-    border: #000 3px solid;
+    border-bottom: 2px solid #000;
+    padding: .5em;
+	text-align: left;
 }
