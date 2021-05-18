@@ -1,0 +1,50 @@
+.contenedorsupremo {
+    width: 195mm;
+    height: 280mm;
+}
+
+table {
+    width: 195mm;
+    border-collapse: collapse;
+}
+
+table {
+    border: 1px solid #333;
+
+}
+
+td {
+    border-top: 1px solid #333;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+th {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+thead, tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+.titulo {
+    text-align: center;
+    border: #000 1px solid;
+    width: 221mm;
+}
+
+.cabecera {
+    border-bottom: #000 3px solid;
+}
+.total-reparto{
+    border-bottom: #000 3px solid;
+    
+}
+.totales{
+    font-size: 20px;
+    border: #000 3px solid;
+}
