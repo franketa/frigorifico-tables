@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <title></title>
+    <link href="ordendefaena.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="a4" id="section"></section>
+
+    <script id="template" type="text/template">
+			<table>
+				<thead>
+					<tr>
+						<th colspan="25">
+							<h1>ORDEN DE FAENA</h1>
+							<h2>{fecha_desde} {establecimiento}</h2>
+						</th>
+					</tr>
+					<tr>
+						<th>CORRAL</th>
+                        <th>CANT</th>
+						<th>TROPA</th>
+						<th>REP</th>
+						<th>USUARIO</th>
+                        <th>DETALLE</th>
+                        <th>KILOS</th>
+						<th>ORDEN#</th>
+						<th>DESDE</th>
+						<th>HASTA</th>
+					</tr>
+				</thead>
+				<tbody>
+					[ordenfaena]
+						[contenido]
+						<tr>
+							<td>{corral}</td>
+                            <td>{cantidad}</td>
+							<td>{tropa}</td>
+							<td>{rep}</td>
+							<td>{usuario}</td>
+                            <td>{detalle}</td>
+                            <td>{kilos}</td>
+							<td>{orden}</td>
+							<td>{desde}</td>
+							<td>{hasta}</td>
+						</tr>
+						[/contenido]
+						[resumen]
+						<tr>
+							<th>{totales}</th>
+                            <th>{cantidad}</th>
+							<th>{tropa}</th>
+							<th>{rep}</th>
+							<th>{usuario}</th>
+                            <th>{detalle}</th>
+                            <th>{kilos}</th>
+							<th>{orden}</th>
+							<th>{desde}</th>
+							<th>{hasta}</th>						
+						</tr>	
+						[/resumen]
+					[/ordenfaena]
+				</tbody>				
+			</table>	
+		</script>
+
+    <script>
+        const contenido = {
+            establecimiento: 'FRIGORIFICO Y MATADERO CHIVILCOY SA',
+            fecha_desde: '01/02/2021',
+            fecha_hasta: '23/02/2021',
+            ordenfaena: [
+                {
+                    contenido: [
+                        {
+                            corral: "35-",
+                            cantidad: "47 TOTAL",
+                            tropa: "32449",
+                            rep: "20",
+                            detalle: "35 NT 45 VQ",
+                            kilos: "3522",
+                            orden: "12.99",
+                            desde: "12.99",
+                            hasta: "12.99",
+                            usuario: 'DON YNDALESIO SOCIEDAD ANONIMA',
+                        },
+                        {
+                            corral: "35-",
+                            cantidad: "47 TOTAL",
+                            tropa: "32449",
+                            rep: "20",
+                            detalle: "35 NT 45 VQ",
+                            kilos: "3522",
+                            orden: "12.99",
+                            desde: "12.99",
+                            hasta: "12.99",
+                            usuario: 'DON YNDALESIO SOCIEDAD ANONIMA',
+                        },
+                        {
+                            corral: "35-",
+                            cantidad: "47 TOTAL",
+                            tropa: "32449",
+                            rep: "20",
+                            detalle: "35 NT 45 VQ",
+                            kilos: "3522",
+                            orden: "12.99",
+                            desde: "12.99",
+                            hasta: "12.99",
+                            usuario: 'DON YNDALESIO SOCIEDAD ANONIMA',
+                        },
+                        {
+                            corral: "35-",
+                            cantidad: "47 TOTAL",
+                            tropa: "32449",
+                            rep: "20",
+                            detalle: "35 NT 45 VQ",
+                            kilos: "3522",
+                            orden: "12.99",
+                            desde: "12.99",
+                            hasta: "12.99",
+                            usuario: 'DON YNDALESIO SOCIEDAD ANONIMA',
+                        },
+                        {
+                            corral: "35-",
+                            cantidad: "47 TOTAL",
+                            tropa: "32449",
+                            rep: "20",
+                            detalle: "35 NT 45 VQ",
+                            kilos: "3522",
+                            orden: "12.99",
+                            desde: "12.99",
+                            hasta: "12.99",
+                            usuario: 'DON YNDALESIO SOCIEDAD ANONIMA',
+                        },
+                        {
+                            corral: "35-",
+                            cantidad: "47 TOTAL",
+                            tropa: "32449",
+                            rep: "20",
+                            detalle: "35 NT 45 VQ",
+                            kilos: "3522",
+                            orden: "12.99",
+                            desde: "12.99",
+                            hasta: "12.99",
+                            usuario: 'DON YNDALESIO SOCIEDAD ANONIMA',
+                        },
+                        {
+                            corral: "35-",
+                            cantidad: "47 TOTAL",
+                            tropa: "32449",
+                            rep: "20",
+                            detalle: "35 NT 45 VQ",
+                            kilos: "3522",
+                            orden: "12.99",
+                            desde: "12.99",
+                            hasta: "12.99",
+                            usuario: 'DON YNDALESIO SOCIEDAD ANONIMA',
+                        },
+                        {
+                            corral: "35-",
+                            cantidad: "47 TOTAL",
+                            tropa: "32449",
+                            rep: "20",
+                            detalle: "35 NT 45 VQ",
+                            kilos: "3522",
+                            orden: "12.99",
+                            desde: "12.99",
+                            hasta: "12.99",
+                            usuario: 'DON YNDALESIO SOCIEDAD ANONIMA',
+                        },
+                        {
+                            corral: "35-",
+                            cantidad: "47 TOTAL",
+                            tropa: "32449",
+                            rep: "20",
+                            detalle: "35 NT 45 VQ",
+                            kilos: "3522",
+                            orden: "12.99",
+                            desde: "12.99",
+                            hasta: "12.99",
+                            usuario: 'DON YNDALESIO SOCIEDAD ANONIMA',
+                        },
+                    ],
+                    resumen: [
+                        {
+                            totales: "TOTAL CABEZAS A FAENA",
+                            corral: "",
+                            cantidad: "",
+                            tropa: "",
+                            rep: "",
+                            detalle: "",
+                            kilos: "",
+                            orden: "",
+                            desde: "",
+                            hasta: "12.99",
+                        },
+                    ]
+                }
+            ]
+        }
+    </script>
+
+    <script>
+        function interpolate(template, data, prefix, history) {
+            prefix || (prefix = '');
+            history || (history = []);
+
+            history.push(data);
+
+            for (var name in data) {
+                interpolate.anyProp.lastIndex = 0;
+                interpolate.anyGroup.lastIndex = 0;
+                if (!interpolate.anyProp.test(template) && !interpolate.anyGroup.test(template)) {
+                    break;
+                }
+
+                if (typeof data[name] !== "object") {
+                    continue;
+                }
+
+                if (Array.isArray(data[name])) {
+                    template = template.replace(new RegExp('\\[' + name + '\\]([\\s\\S]*?)\\[\\/' + name + '\\]', 'gi'), function (match, template) {
+                        return data[name].map(function (data, staticIdx) {
+                            if (history.indexOf(data[name]) === -1) {
+                                return interpolate(template, data, prefix, history).replace(new RegExp('\\{:idx:\\}', 'gi'), staticIdx);
+                            }
+
+                            return template.replace(new RegExp('\\{:idx:\\}', 'gi'), staticIdx);
+                        })
+                            .join("");
+                    });
+
+                    continue;
+                }
+            }
+
+            for (var name in data) {
+                interpolate.anyProp.lastIndex = 0;
+                interpolate.anyGroup.lastIndex = 0;
+                if (!interpolate.anyProp.test(template) && !interpolate.anyGroup.test(template)) {
+                    break;
+                }
+
+                if (typeof data[name] === "object") {
+                    // Prevent circular references.
+                    if (history.indexOf(data[name]) === -1) {
+                        template = interpolate(template, data[name], (prefix ? prefix : '') + name + '\.', history);
+                    }
+
+                    continue;
+                }
+
+                template = template.replace(new RegExp('\\{' + prefix + name + '\\}', 'gi'), data[name]);
+            }
+
+            if (prefix === '') {
+                interpolate.anyProp.lastIndex = 0;
+                template = template.replace(interpolate.anyProp, '');
+            }
+
+            return template;
+        }
+
+        interpolate.anyProp = new RegExp('\\{[a-zA-Z0-9._]+\\}', 'gi');
+        interpolate.anyGroup = new RegExp('\\[[a-zA-Z0-9._]+\\]', 'gi');
+
+        const section = document.getElementById('section'),
+            template = document.getElementById('template');
+
+        section.innerHTML = interpolate(template.innerHTML, contenido);
+
+    </script>
+</body>
+
+</html>
