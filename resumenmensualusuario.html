@@ -13,7 +13,7 @@
 
     <script id="template" type="text/template">
 			<table>
-				<thead>
+				
 					<tr>
 						<th colspan="25">
 							<h1>RESUMEN DE FAENA POR CLASIFICACION</h1>
@@ -22,23 +22,48 @@
                             <h3>USUARIO: {usuario}</h3>
 						</th>
 					</tr>
-					<tr>
-						<th>FECHA</th>
-						<th>NOVILLOS</th>
-						<th>CABEZAS</th>
-						<th>ORIGEN</th>
-                        <th>LOCALIDAD</th>
-                        <th>GUIA</th>
-						<th>KGs. Vivos</th>
-						<th>KGs. Limpios</th>
-						<th>53%</th>
+                    <tr>
+                        <th rowspan="3">FECHA</th>
+                        <th rowspan="2">NOVILLOS</th>
+                        <th rowspan="1" colspan="2">NOVILLITOS</th>
+                        <th rowspan="2">TOROS</th>
+                        <th rowspan="1" colspan="2">VACAS</th>
+                        <th rowspan="1" colspan="2">VAQUILLONAS</th>
+                        <th rowspan="2">TERNEROS H</th>
+                        <th rowspan="2">TERNEROS M</th>
+                        <th rowspan="2">DIGESTOR</th>
+                        <th rowspan="2">TOTALES</th>
+                        
+                      </tr>
+                      <tr>
+                        <th>+ DE 110K</th>
+                        <th>HASTA 110K</th>
+                        <th>CLASE 1</th>
+                        <th>CLASE 2</th>
+                        <th>+ DE 110K</th>
+                        <th>HASTA 110K</th>
+                      </tr>
+					<tr>			
+						<th>CAB / / KILOS</th>
+						<th>CAB / / KILOS</th>
+						<th>CAB / / KILOS</th>
+                        <th>CAB / / KILOS</th>
+                        <th>CAB / / KILOS</th>
+						<th>CAB / / KILOS</th>
+						<th>CAB / / KILOS</th>
+                        <th>CAB / / KILOS</th>
+                        <th>CAB / / KILOS</th>
+						<th>CAB / / KILOS</th>
+                        <th>CAB / / KILOS</th>
+						<th>CAB / / KILOS</th>
+
 					</tr>
-				</thead>
+				
 				<tbody>
 					[historialfaena]
 						[contenido]
 						<tr>
-							<td>{fecha}</td>
+							<td>{fecha} / / {fecha}</td>
 							<td>{tropa}</td>
 							<td>{cabezas}</td>
 							<td>{origen}</td>
