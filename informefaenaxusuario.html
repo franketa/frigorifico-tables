@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <title></title>
-    <link href="informefaenaxreparto.css" rel="stylesheet">
+    <link href="informefaenaxusuario.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,50 +16,53 @@
 				<thead>
 					<tr>
 						<th colspan="25">
-							<h1>INFORME DE FAENA POR REPARTO</h1>
+							<h1>INFORME DE FAENA POR USUARIO</h1>
 							<h2>{establecimiento}</h2>
-							<h3>{direccion}</h3>
 							<h4>DESDE: {fecha_desde} HASTA: {fecha_hasta}</h4>
+                            <h3>USUARIO: {usuario}</h3>
 						</th>
 					</tr>
 					<tr>
 						<th>FECHA</th>
 						<th>TROPA</th>
 						<th>CABEZAS</th>
-						<th>PROMEDIO</th>
+						<th>ORIGEN</th>
+                        <th>LOCALIDAD</th>
+                        <th>GUIA</th>
 						<th>KGs. Vivos</th>
 						<th>KGs. Limpios</th>
-						<th>Rinde</th>
+						<th>53%</th>
 					</tr>
 				</thead>
 				<tbody>
-					[reparto]
-						<tr>
-							<th colspan="7">{nombre}</th>
-						</tr>
+					[historialfaena]
 						[contenido]
 						<tr>
 							<td>{fecha}</td>
 							<td>{tropa}</td>
 							<td>{cabezas}</td>
-							<td>{promedio}</td>
+							<td>{origen}</td>
+                            <td>{localidad}</td>
+                            <td>{guia}</td>
 							<td>{kg_vivos}</td>
 							<td>{kg_limpios}</td>
-							<td>{rinde}</td>
+							<td>{porcentaje}</td>
 						</tr>
 						[/contenido]
 						[resumen]
 						<tr>
-							<th>{fecha}</th>
+							<th>{totales}</th>
 							<th>{tropa}</th>
 							<th>{cabezas}</th>
-							<th>{promedio}</th>
+							<th>{origen}</th>
+                            <th>{localidad}</th>
+                            <th>{guia}</th>
 							<th>{kg_vivos}</th>
 							<th>{kg_limpios}</th>
-							<th>{rinde}</th>						
+							<th>{porcentaje}</th>						
 						</tr>	
 						[/resumen]
-					[/reparto]
+					[/historialfaena]
 				</tbody>				
 			</table>	
 		</script>
@@ -67,75 +70,135 @@
     <script>
         const contenido = {
             establecimiento: 'FRIGORIFICO Y MATADERO CHIVILCOY SA',
-            direccion: 'RUTA5 KM 163.5',
-            fecha_desde: '22/02/2021',
-            fecha_hasta: '22/02/2021',
-            reparto: [
+            usuario: 'DON YNDALESIO SOCIEDAD ANONIMA',
+            fecha_desde: '01/02/2021',
+            fecha_hasta: '23/02/2021',
+            historialfaena: [
                 {
-                    nombre: "REPARTO 01",
                     contenido: [
                         {
                             fecha: "22/08/2021",
                             tropa: "12.99",
                             cabezas: "12.99",
-                            promedio: "12.99",
+                            origen: "ESTANCIA AFIJ",
+                            localidad: "DAIREAUX",
+                            guia: "629844",
                             kg_vivos: "12.99",
                             kg_limpios: "12.99",
-                            rinde: "12.99"
+                            porcentaje: "12.99"
                         },
                         {
                             fecha: "22/08/2021",
                             tropa: "12.99",
                             cabezas: "12.99",
-                            promedio: "12.99",
+                            origen: "ESTANCIA AFIJ",
+                            localidad: "CHIVILCOY",
+                            guia: "6215115",
                             kg_vivos: "12.99",
                             kg_limpios: "12.99",
-                            rinde: "12.99"
+                            porcentaje: "12.99"
+                        },
+                        {
+                            fecha: "22/08/2021",
+                            tropa: "12.99",
+                            cabezas: "12.99",
+                            origen: "ESTANCIA AFIJ",
+                            localidad: "DAIREAUX",
+                            guia: "629844",
+                            kg_vivos: "12.99",
+                            kg_limpios: "12.99",
+                            porcentaje: "12.99"
+                        },
+                        {
+                            fecha: "22/08/2021",
+                            tropa: "12.99",
+                            cabezas: "12.99",
+                            origen: "ESTANCIA AFIJ",
+                            localidad: "CHIVILCOY",
+                            guia: "6215115",
+                            kg_vivos: "12.99",
+                            kg_limpios: "12.99",
+                            porcentaje: "12.99"
+                        },
+                        {
+                            fecha: "22/08/2021",
+                            tropa: "12.99",
+                            cabezas: "12.99",
+                            origen: "ESTANCIA AFIJ",
+                            localidad: "DAIREAUX",
+                            guia: "629844",
+                            kg_vivos: "12.99",
+                            kg_limpios: "12.99",
+                            porcentaje: "12.99"
+                        },
+                        {
+                            fecha: "22/08/2021",
+                            tropa: "12.99",
+                            cabezas: "12.99",
+                            origen: "ESTANCIA AFIJ",
+                            localidad: "CHIVILCOY",
+                            guia: "6215115",
+                            kg_vivos: "12.99",
+                            kg_limpios: "12.99",
+                            porcentaje: "12.99"
+                        },
+                        {
+                            fecha: "22/08/2021",
+                            tropa: "12.99",
+                            cabezas: "12.99",
+                            origen: "ESTANCIA AFIJ",
+                            localidad: "DAIREAUX",
+                            guia: "629844",
+                            kg_vivos: "12.99",
+                            kg_limpios: "12.99",
+                            porcentaje: "12.99"
+                        },
+                        {
+                            fecha: "22/08/2021",
+                            tropa: "12.99",
+                            cabezas: "12.99",
+                            origen: "ESTANCIA AFIJ",
+                            localidad: "CHIVILCOY",
+                            guia: "6215115",
+                            kg_vivos: "12.99",
+                            kg_limpios: "12.99",
+                            porcentaje: "12.99"
+                        },
+                        {
+                            fecha: "22/08/2021",
+                            tropa: "12.99",
+                            cabezas: "12.99",
+                            origen: "ESTANCIA AFIJ",
+                            localidad: "DAIREAUX",
+                            guia: "629844",
+                            kg_vivos: "12.99",
+                            kg_limpios: "12.99",
+                            porcentaje: "12.99"
+                        },
+                        {
+                            fecha: "22/08/2021",
+                            tropa: "12.99",
+                            cabezas: "12.99",
+                            origen: "ESTANCIA AFIJ",
+                            localidad: "CHIVILCOY",
+                            guia: "6215115",
+                            kg_vivos: "12.99",
+                            kg_limpios: "12.99",
+                            porcentaje: "12.99"
                         },
                     ],
                     resumen: [
                         {
-                            fecha: "",
-                            tropa: "",
-                            cabezas: "12.99",
-                            promedio: "12.99",
-                            kg_vivos: "12.99",
-                            kg_limpios: "12.99",
-                            rinde: "12.99"
-                        },
-                    ]
-                },
-                {
-                    nombre: "REPARTO 02",
-                    contenido: [
-                        {
+                            totales: "TOTALES",
                             fecha: "22/08/2021",
-                            tropa: "12.99",
-                            cabezas: "12.99",
-                            promedio: "12.99",
-                            kg_vivos: "12.99",
-                            kg_limpios: "12.99",
-                            rinde: "12.99"
-                        },
-                        {
-                            fecha: "22/08/2021",
-                            tropa: "12.99",
-                            cabezas: "12.99",
-                            promedio: "12.99",
-                            kg_vivos: "12.99",
-                            kg_limpios: "12.99",
-                            rinde: "12.99"
-                        },
-                    ],
-                    resumen: [
-                        {
-                            fecha: "",
                             tropa: "",
-                            cabezas: "12.99",
-                            promedio: "12.99",
-                            kg_vivos: "12.99",
-                            kg_limpios: "12.99",
-                            rinde: "12.99"
+                            cabezas: "25.98",
+                            origen: "",
+                            localidad: "",
+                            guia: "",
+                            kg_vivos: "25.98",
+                            kg_limpios: "25.98",
+                            porcentaje: ""
                         },
                     ]
                 }
