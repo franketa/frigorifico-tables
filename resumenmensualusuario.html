@@ -13,13 +13,14 @@
 
     <script id="template" type="text/template">
 			<table>
-				
+				<thead>
 					<tr>
 						<th colspan="25">
 							<h1>RESUMEN DE FAENA POR CLASIFICACION</h1>
 							<h2>{establecimiento}</h2>
-							<h4>DESDE: {fecha_desde} HASTA: {fecha_hasta}</h4>
+							<h3>DESDE: {fecha_desde} HASTA: {fecha_hasta}</h3>
                             <h3>USUARIO: {usuario}</h3>
+                            <h3>DETALLE DEL PERIODO </h3>
 						</th>
 					</tr>
                     <tr>
@@ -33,8 +34,6 @@
                         <th rowspan="2" colspan="2">TERNEROS M</th>
                         <th rowspan="2" colspan="2">DIGESTOR</th>
                         <th rowspan="2" colspan="2">TOTALES</th>
-                        
-                        
                       </tr>
                       <tr>
                         <th colspan="2">+ DE 110K</th>
@@ -69,11 +68,8 @@
 						<th>KILOS</th>
                         <th>CAB</th>
 						<th>KILOS</th>
-
-
-
 					</tr>
-				
+                </thead>
 				<tbody>
 					[resumenmensual]
 						[contenido]
@@ -133,7 +129,38 @@
                             <th>{totales_cab}</th>
                             <th>{totales_kilo}</th>					
 						</tr>	
-						[/resumen]
+                        [/resumen]
+                    </tbody>				
+                </table>
+                        [resumen_especificado]
+                        <table class="totales-especificos">
+                        <tr>
+                            <th colspan="6">VAQUILLONAS</th>
+                            <th colspan="6">NOVILLITOS</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Hasta 110 Kgs</th>
+                            <th colspan="2">De 111 a 120 Kgs</th>
+                            <th colspan="2">+ 120 Kgs</th>
+                            <th colspan="2">Hasta 110 Kgs</th>
+                            <th colspan="2">De 111 a 120 Kgs</th>
+                            <th colspan="2">+ 120 Kgs</th>
+                        </tr>
+                        <tr>
+                            <td>{novillitos_a_cab}</td>
+                            <td>{novillitos_a_kilos}</td>
+                            <td>{novillitos_b_cab}</td>
+                            <td>{novillitos_b_kilos}</td>
+                            <td>{novillitos_c_cab}</td>
+                            <td>{novillitos_c_kilos}</td>
+                            <td>{novillitos_a_cab}</td>
+                            <td>{novillitos_a_kilos}</td>
+                            <td>{novillitos_b_cab}</td>
+                            <td>{novillitos_b_kilos}</td>
+                            <td>{novillitos_c_cab}</td>
+                            <td>{novillitos_c_kilos}</td>
+                        </tr>
+						[/resumen_especificado]
 					[/resumenmensual]
 				</tbody>				
 			</table>	
@@ -150,60 +177,76 @@
                     contenido: [
                         {
                             fecha: "22/08/2021",
-                            novillos_cab: "35.00",
-                            novillos_kilos: "9491",
-                            novillitos_a_cab: "12.32",
-                            novillitos_a_kilos: "9491",
-                            novillitos_b_cab: "12.32",
-                            novillitos_b_kilos: "9491",
-                            toros_cab: "35.00",
-                            toros_kilos: "9491",
+                            novillos_cab: "12.99",
+                            novillos_kilos: "12.99",
+                            novillitos_a_cab: "12.99",
+                            novillitos_a_kilos: "12.99",
+                            novillitos_b_cab: "12.99",
+                            novillitos_b_kilos: "12.99",
+                            toros_cab: "12.99",
+                            toros_kilos: "12.99",
                             vacas_c1_cab: "12.99",
-                            vacas_c1_kilos: "9491",
+                            vacas_c1_kilos: "12.99",
                             vacas_c2_cab: "12.99",
-                            vacas_c2_kilos: "9491",
+                            vacas_c2_kilos: "12.99",
                             vaquillonas_a_cab: "12.99",
-                            vaquillonas_a_kilos: "9491",
+                            vaquillonas_a_kilos: "12.99",
                             vaquillonas_b_cab: "12.99",
-                            vaquillonas_b_kilos: "9491",
-                            ternerosh_cab: "35.00",
-                            ternerosh_kilos: "9491",
-                            ternerosm_cab: "35.00",
-                            ternerosm_kilos: "9491",
-                            digestor_cab: "35.00",
-                            digestor_kilos: "9491",
-                            totales_cab: "800",
-                            totales_kilo: "108402"
+                            vaquillonas_b_kilos: "12.99",
+                            ternerosh_cab: "12.99",
+                            ternerosh_kilos: "12.99",
+                            ternerosm_cab: "12.99",
+                            ternerosm_kilos: "12.99",
+                            digestor_cab: "12.99",
+                            digestor_kilos: "12.99",
+                            totales_cab: "12.99",
+                            totales_kilo: "12.99"
                         }
                     ],
                     resumen: [
                         {
                             totales: "TOTALES",
-                            novillos_cab: "35.00",
-                            novillos_kilos: "9491",
-                            novillitos_a_cab: "12.32",
-                            novillitos_a_kilos: "9491",
-                            novillitos_b_cab: "12.32",
-                            novillitos_b_kilos: "9491",
-                            toros_cab: "35.00",
-                            toros_kilos: "9491",
+                            novillos_cab: "12.99",
+                            novillos_kilos: "12.99",
+                            novillitos_a_cab: "12.99",
+                            novillitos_a_kilos: "12.99",
+                            novillitos_b_cab: "12.99",
+                            novillitos_b_kilos: "12.99",
+                            toros_cab: "12.99",
+                            toros_kilos: "12.99",
                             vacas_c1_cab: "12.99",
-                            vacas_c1_kilos: "9491",
+                            vacas_c1_kilos: "12.99",
                             vacas_c2_cab: "12.99",
-                            vacas_c2_kilos: "9491",
+                            vacas_c2_kilos: "12.99",
                             vaquillonas_a_cab: "12.99",
-                            vaquillonas_a_kilos: "9491",
+                            vaquillonas_a_kilos: "12.99",
                             vaquillonas_b_cab: "12.99",
-                            vaquillonas_b_kilos: "9491",
-                            ternerosh_cab: "35.00",
-                            ternerosh_kilos: "9491",
-                            ternerosm_cab: "35.00",
-                            ternerosm_kilos: "9491",
-                            digestor_cab: "35.00",
-                            digestor_kilos: "9491",
-                            totales_cab: "800",
-                            totales_kilo: "108402"
+                            vaquillonas_b_kilos: "12.99",
+                            ternerosh_cab: "12.99",
+                            ternerosh_kilos: "12.99",
+                            ternerosm_cab: "12.99",
+                            ternerosm_kilos: "12.99",
+                            digestor_cab: "12.99",
+                            digestor_kilos: "12.99",
+                            totales_cab: "12.99",
+                            totales_kilo: "12.99"
                         },
+                    ],
+                    resumen_especificado: [
+                        {
+                            vaquillonas_a_cab: "12.99",
+                            vaquillonas_a_kilos: "12.99",
+                            vaquillonas_b_cab: "12.99",
+                            vaquillonas_b_kilos: "12.99",
+                            vaquillonas_c_cab: "12.99",
+                            vaquillonas_c_kilos: "12.99",
+                            novillitos_a_cab: "12.99",
+                            novillitos_a_kilos: "12.99",
+                            novillitos_b_cab: "12.99",
+                            novillitos_b_kilos: "12.99",
+                            novillitos_c_cab: "12.99",
+                            novillitos_c_kilos: "12.99",
+                        }
                     ]
                 }
             ]
