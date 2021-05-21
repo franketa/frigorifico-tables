@@ -75,64 +75,110 @@
 						[contenido]
 						<tr>
 							<td>{fecha}</td>
-							<td>{novillos_cab}</td>
-                            <td>{novillos_kilos}</td>
-							<td>{novillitos_a_cab}</td>
-                            <td>{novillitos_a_kilos}</td>
-                            <td>{novillitos_b_cab}</td>
-                            <td>{novillitos_b_kilos}</td>
-                            <td>{toros_cab}</td>
-                            <td>{toros_kilos}</td>
-                            <td>{vacas_c1_cab}</td>
-                            <td>{vacas_c1_kilos}</td>
-                            <td>{vacas_c2_cab}</td>
-                            <td>{vacas_c2_kilos}</td>
-                            <td>{vaquillonas_a_cab}</td>
-                            <td>{vaquillonas_a_kilos}</td>
-                            <td>{vaquillonas_b_cab}</td>
-                            <td>{vaquillonas_b_kilos}</td>
-                            <td>{ternerosh_cab}</td>
-                            <td>{ternerosh_kilos}</td>
-                            <td>{ternerosm_cab}</td>
-                            <td>{ternerosm_kilos}</td>
-							<td>{digestor_cab}</td>
-                            <td>{digestor_kilos}</td>
-                            <td>{totales_cab}</td>
-                            <td>{totales_kilo}</td>
+                            [novillos]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/novillos]
+                            [novillitos_a]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/novillitos_a]
+                            [novillitos_b]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/novillitos_b]
+                            [toros]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/toros]
+                            [vacas_c1]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/vacas_c1]
+                            [vacas_c2]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/vacas_c2]
+                            [vaquillonas_a]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/vaquillonas_a]
+                            [vaquillonas_b]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/vaquillonas_b]
+                            [terneros_h]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/terneros_h]
+                            [terneros_m]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/terneros_m]
+							[digestor]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/digestor]
+                            [totales]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/totales]
 						</tr>
 						[/contenido]
 						[resumen]
 						<tr>
-							<th>{totales}</th>
-							<th>{novillos_cab}</th>
-                            <th>{novillos_kilos}</th>
-							<th>{novillitos_a_cab}</th>
-                            <th>{novillitos_a_kilos}</th>
-                            <th>{novillitos_b_cab}</th>
-                            <th>{novillitos_b_kilos}</th>
-                            <th>{toros_cab}</th>
-                            <th>{toros_kilos}</th>
-                            <th>{vacas_c1_cab}</th>
-                            <th>{vacas_c1_kilos}</th>
-                            <th>{vacas_c2_cab}</th>
-                            <th>{vacas_c2_kilos}</th>
-                            <th>{vaquillonas_a_cab}</th>
-                            <th>{vaquillonas_a_kilos}</th>
-                            <th>{vaquillonas_b_cab}</th>
-                            <th>{vaquillonas_b_kilos}</th>
-                            <th>{ternerosh_cab}</th>
-                            <th>{ternerosh_kilos}</th>
-                            <th>{ternerosm_cab}</th>
-                            <th>{ternerosm_kilos}</th>
-							<th>{digestor_cab}</th>
-                            <th>{digestor_kilos}</th>
-                            <th>{totales_cab}</th>
-                            <th>{totales_kilo}</th>					
+							<th>{total}</th>
+							[novillos]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/novillos]
+                            [novillitos_a]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/novillitos_a]
+                            [novillitos_b]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/novillitos_b]
+                            [toros]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/toros]
+                            [vacas_c1]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/vacas_c1]
+                            [vacas_c2]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/vacas_c2]
+                            [vaquillonas_a]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/vaquillonas_a]
+                            [vaquillonas_b]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/vaquillonas_b]
+                            [terneros_h]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/terneros_h]
+                            [terneros_m]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/terneros_m]
+							[digestor]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/digestor]
+                            [totales]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/totales]				
 						</tr>	
-                        [/resumen]
                     </tbody>				
                 </table>
-                        [resumen_especificado]
                         <table class="totales-especificos">
                         <tr>
                             <th colspan="6">VAQUILLONAS</th>
@@ -147,20 +193,32 @@
                             <th colspan="2">+ 120 Kgs</th>
                         </tr>
                         <tr>
-                            <td>{novillitos_a_cab}</td>
-                            <td>{novillitos_a_kilos}</td>
-                            <td>{novillitos_b_cab}</td>
-                            <td>{novillitos_b_kilos}</td>
-                            <td>{novillitos_c_cab}</td>
-                            <td>{novillitos_c_kilos}</td>
-                            <td>{novillitos_a_cab}</td>
-                            <td>{novillitos_a_kilos}</td>
-                            <td>{novillitos_b_cab}</td>
-                            <td>{novillitos_b_kilos}</td>
-                            <td>{novillitos_c_cab}</td>
-                            <td>{novillitos_c_kilos}</td>
+                            [vaquillonas_a]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/vaquillonas_a]
+                            [vaquillonas_b]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/vaquillonas_b]
+                            [vaquillonas_c]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/vaquillonas_c]
+                            [novillitos_a]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/novillitos_a]
+                            [novillitos_b]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/novillitos_b]
+                            [novillitos_c]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/novillitos_c]
                         </tr>
-						[/resumen_especificado]
+						[/resumen]
 					[/resumenmensual]
 				</tbody>				
 			</table>	
@@ -177,77 +235,182 @@
                     contenido: [
                         {
                             fecha: "22/08/2021",
-                            novillos_cab: "12.99",
-                            novillos_kilos: "12.99",
-                            novillitos_a_cab: "12.99",
-                            novillitos_a_kilos: "12.99",
-                            novillitos_b_cab: "12.99",
-                            novillitos_b_kilos: "12.99",
-                            toros_cab: "12.99",
-                            toros_kilos: "12.99",
-                            vacas_c1_cab: "12.99",
-                            vacas_c1_kilos: "12.99",
-                            vacas_c2_cab: "12.99",
-                            vacas_c2_kilos: "12.99",
-                            vaquillonas_a_cab: "12.99",
-                            vaquillonas_a_kilos: "12.99",
-                            vaquillonas_b_cab: "12.99",
-                            vaquillonas_b_kilos: "12.99",
-                            ternerosh_cab: "12.99",
-                            ternerosh_kilos: "12.99",
-                            ternerosm_cab: "12.99",
-                            ternerosm_kilos: "12.99",
-                            digestor_cab: "12.99",
-                            digestor_kilos: "12.99",
-                            totales_cab: "12.99",
-                            totales_kilo: "12.99"
+                            novillos: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            novillitos_a: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            novillitos_b: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            novillitos_c: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            toros: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vacas_c1: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vacas_c2: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vaquillonas_a: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vaquillonas_b: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vaquillonas_c: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            terneros_h: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            terneros_m: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            digestor: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            totales: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
                         }
                     ],
                     resumen: [
                         {
-                            totales: "TOTALES",
-                            novillos_cab: "12.99",
-                            novillos_kilos: "12.99",
-                            novillitos_a_cab: "12.99",
-                            novillitos_a_kilos: "12.99",
-                            novillitos_b_cab: "12.99",
-                            novillitos_b_kilos: "12.99",
-                            toros_cab: "12.99",
-                            toros_kilos: "12.99",
-                            vacas_c1_cab: "12.99",
-                            vacas_c1_kilos: "12.99",
-                            vacas_c2_cab: "12.99",
-                            vacas_c2_kilos: "12.99",
-                            vaquillonas_a_cab: "12.99",
-                            vaquillonas_a_kilos: "12.99",
-                            vaquillonas_b_cab: "12.99",
-                            vaquillonas_b_kilos: "12.99",
-                            ternerosh_cab: "12.99",
-                            ternerosh_kilos: "12.99",
-                            ternerosm_cab: "12.99",
-                            ternerosm_kilos: "12.99",
-                            digestor_cab: "12.99",
-                            digestor_kilos: "12.99",
-                            totales_cab: "12.99",
-                            totales_kilo: "12.99"
+                            total: "TOTALES",
+                            fecha: "22/08/2021",
+                            novillos: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            novillitos_a: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            novillitos_b: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            novillitos_c: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            toros: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vacas_c1: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vacas_c2: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vaquillonas_a: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vaquillonas_b: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vaquillonas_c: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            terneros_h: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            terneros_m: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            digestor: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            totales: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
                         },
                     ],
-                    resumen_especificado: [
-                        {
-                            vaquillonas_a_cab: "12.99",
-                            vaquillonas_a_kilos: "12.99",
-                            vaquillonas_b_cab: "12.99",
-                            vaquillonas_b_kilos: "12.99",
-                            vaquillonas_c_cab: "12.99",
-                            vaquillonas_c_kilos: "12.99",
-                            novillitos_a_cab: "12.99",
-                            novillitos_a_kilos: "12.99",
-                            novillitos_b_cab: "12.99",
-                            novillitos_b_kilos: "12.99",
-                            novillitos_c_cab: "12.99",
-                            novillitos_c_kilos: "12.99",
-                        }
-                    ]
                 }
             ]
         }
