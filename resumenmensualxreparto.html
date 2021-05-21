@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <title></title>
+    <link href="resumenmensualxreparto.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="a4" id="section"></section>
+
+    <script id="template" type="text/template">
+			<table>
+				<thead>
+					<tr>
+						<th colspan="27">
+							<h1>RESUMEN DE FAENA POR CLASIFICACION</h1>
+							<h3>DESDE: {fecha_desde} HASTA: {fecha_hasta}</h3>
+                            <h3>REPARTO: {reparto}</h3>
+                            <h3>DETALLE DEL PERIODO </h3>
+						</th>
+					</tr>
+                    <tr>
+                        <th rowspan="3">FECHA</th>
+                        <th rowspan="2" colspan="2">NOVILLOS</th>
+                        <th rowspan="1" colspan="4">NOVILLITOS</th>
+                        <th rowspan="2" colspan="2">TOROS</th>
+                        <th rowspan="1" colspan="4">VACAS</th>
+                        <th rowspan="1" colspan="4">VAQUILLONAS</th>
+                        <th rowspan="2" colspan="2">TERNEROS H</th>
+                        <th rowspan="2" colspan="2">TERNEROS M</th>
+                        <th rowspan="2" colspan="2">DIGESTOR</th>
+                        <th rowspan="2" colspan="2">MUERTOS CORRAL</th>
+                        <th rowspan="2" colspan="2">TOTALES</th>
+
+                      </tr>
+                      <tr>
+                        <th colspan="2"></th>
+                        <th colspan="2">HASTA 90K</th>
+                        <th colspan="2">CONSUMO</th>
+                        <th colspan="2">CONSERVA</th>
+                        <th colspan="2"></th>
+                        <th colspan="2">HASTA 90K</th>
+                      </tr>
+					<tr>			
+						<th>CAB</th>
+						<th>KILOS</th>
+						<th>CAB</th>
+                        <th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+						<th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th colspan="2">CABEZAS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+					</tr>
+                </thead>
+				<tbody>
+					[resumenmensual]
+						[contenido]
+						<tr>
+							<td>{fecha}</td>
+                            [novillos]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/novillos]
+                            [novillitos_a]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/novillitos_a]
+                            [novillitos_b]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/novillitos_b]
+                            [toros]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/toros]
+                            [vacas_c1]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/vacas_c1]
+                            [vacas_c2]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/vacas_c2]
+                            [vaquillonas_a]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/vaquillonas_a]
+                            [vaquillonas_b]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/vaquillonas_b]
+                            [terneros_h]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/terneros_h]
+                            [terneros_m]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/terneros_m]
+							[digestor]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/digestor]
+                            [muertos_corral]
+							<td colspan="2">{cab}</td>
+                            [/muertos_corral]
+                            [totales]
+							<td>{cab}</td>
+                            <td>{kilos}</td>
+                            [/totales]       
+						</tr>
+						[/contenido]
+                    </tbody>				
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th colspan="27">
+                                <h3>RESUMEN DEL PERIODO </h3>
+                            </th>
+                        </tr>
+                        <tr>
+                        <th rowspan="3">FECHA</th>
+                        <th rowspan="2" colspan="2">NOVILLOS</th>
+                        <th rowspan="1" colspan="4">NOVILLITOS</th>
+                        <th rowspan="2" colspan="2">TOROS</th>
+                        <th rowspan="1" colspan="4">VACAS</th>
+                        <th rowspan="1" colspan="4">VAQUILLONAS</th>
+                        <th rowspan="2" colspan="2">TERNEROS H</th>
+                        <th rowspan="2" colspan="2">TERNEROS M</th>
+                        <th rowspan="2" colspan="2">DIGESTOR</th>
+                        <th rowspan="2" colspan="2">MUERTOS CORRAL</th>
+
+                      </tr>
+                      <tr>
+                        <th colspan="2"></th>
+                        <th colspan="2">HASTA 90K</th>
+                        <th colspan="2">CONSUMO</th>
+                        <th colspan="2">CONSERVA</th>
+                        <th colspan="2"></th>
+                        <th colspan="2">HASTA 90K</th>
+                      </tr>
+					<tr>			
+						<th>CAB</th>
+						<th>KILOS</th>
+						<th>CAB</th>
+                        <th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+						<th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th>CAB</th>
+						<th>KILOS</th>
+                        <th colspan="2">CABEZAS</th>
+					</tr>
+                </thead>
+				<tbody>
+                    [resumen]
+						<tr>
+							<th>{total}</th>
+							[novillos]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/novillos]
+                            [novillitos_a]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/novillitos_a]
+                            [novillitos_b]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/novillitos_b]
+                            [toros]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/toros]
+                            [vacas_c1]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/vacas_c1]
+                            [vacas_c2]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/vacas_c2]
+                            [vaquillonas_a]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/vaquillonas_a]
+                            [vaquillonas_b]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/vaquillonas_b]
+                            [terneros_h]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/terneros_h]
+                            [terneros_m]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/terneros_m]
+							[digestor]
+							<th>{cab}</th>
+                            <th>{kilos}</th>
+                            [/digestor]
+                            [muertos_corral]
+							<th colspan="2">{cab}</th>
+                            [/muertos_corral]
+                            				
+						</tr>	
+                    </tbody>				
+                </table>
+                        <table class="totales-especificos">
+                        <tr>
+                            <th colspan="6" >TOTAL DE CABEZAS FAENADAS</th>
+                            <th colspan="6" >TOTAL KILOS FAENADOS</th>
+                            <th colspan="6" >NOVILLITOS HASTA 90 Kg / MEDIA</th>
+                            <th colspan="6" >VAQUILLONAS HASTA 90 Kg / MEDIA</th>   
+                        </tr>
+                        <tr>
+							<th colspan="6">{cabezas_faenadas}</th>
+                            <th colspan="6">{kilos_faenados}</th>
+                            [novillitos_b]
+							<th colspan="3">{cab}</th>
+                            <th colspan="3">{kilos}</th>
+                            [/novillitos_b]
+                            [vaquillonas_b]
+							<th colspan="3">{cab}</th>
+                            <th colspan="3">{kilos}</th>
+                            [/vaquillonas_b]
+                        </tr>
+						[/resumen]
+					[/resumenmensual]
+				</tbody>				
+			</table>	
+		</script>
+
+    <script>
+        const contenido = {
+            establecimiento: 'FRIGORIFICO Y MATADERO CHIVILCOY SA',
+            reparto: '149',
+            fecha_desde: '01/02/2021',
+            fecha_hasta: '23/02/2021',
+            resumenmensual: [
+                {
+                    contenido: [
+                        {
+                            fecha: "22/08/2021",
+                            novillos: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            novillitos_a: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            novillitos_b: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            novillitos_c: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            toros: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vacas_c1: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vacas_c2: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vaquillonas_a: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vaquillonas_b: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vaquillonas_c: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            terneros_h: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            terneros_m: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            digestor: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            muertos_corral: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            totales: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                        }
+                    ],
+                    resumen: [
+                        {
+                            total: "TOTALES",
+                            fecha: "22/08/2021",
+                            cabezas_faenadas: "45",
+                            kilos_faenados: "9852",
+                            novillos: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            novillitos_a: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            novillitos_b: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            novillitos_c: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            toros: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vacas_c1: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vacas_c2: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vaquillonas_a: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vaquillonas_b: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            vaquillonas_c: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            terneros_h: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            terneros_m: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            digestor: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                            muertos_corral: [
+                                {
+                                    cab: "12.99",
+                                    kilos: "12.99"
+                                }
+                            ],
+                        },
+                    ],
+                }
+            ]
+        }
+    </script>
+
+    <script>
+        function interpolate(template, data, prefix, history) {
+            prefix || (prefix = '');
+            history || (history = []);
+
+            history.push(data);
+
+            for (var name in data) {
+                interpolate.anyProp.lastIndex = 0;
+                interpolate.anyGroup.lastIndex = 0;
+                if (!interpolate.anyProp.test(template) && !interpolate.anyGroup.test(template)) {
+                    break;
+                }
+
+                if (typeof data[name] !== "object") {
+                    continue;
+                }
+
+                if (Array.isArray(data[name])) {
+                    template = template.replace(new RegExp('\\[' + name + '\\]([\\s\\S]*?)\\[\\/' + name + '\\]', 'gi'), function (match, template) {
+                        return data[name].map(function (data, staticIdx) {
+                            if (history.indexOf(data[name]) === -1) {
+                                return interpolate(template, data, prefix, history).replace(new RegExp('\\{:idx:\\}', 'gi'), staticIdx);
+                            }
+
+                            return template.replace(new RegExp('\\{:idx:\\}', 'gi'), staticIdx);
+                        })
+                            .join("");
+                    });
+
+                    continue;
+                }
+            }
+
+            for (var name in data) {
+                interpolate.anyProp.lastIndex = 0;
+                interpolate.anyGroup.lastIndex = 0;
+                if (!interpolate.anyProp.test(template) && !interpolate.anyGroup.test(template)) {
+                    break;
+                }
+
+                if (typeof data[name] === "object") {
+                    // Prevent circular references.
+                    if (history.indexOf(data[name]) === -1) {
+                        template = interpolate(template, data[name], (prefix ? prefix : '') + name + '\.', history);
+                    }
+
+                    continue;
+                }
+
+                template = template.replace(new RegExp('\\{' + prefix + name + '\\}', 'gi'), data[name]);
+            }
+
+            if (prefix === '') {
+                interpolate.anyProp.lastIndex = 0;
+                template = template.replace(interpolate.anyProp, '');
+            }
+
+            return template;
+        }
+
+        interpolate.anyProp = new RegExp('\\{[a-zA-Z0-9._]+\\}', 'gi');
+        interpolate.anyGroup = new RegExp('\\[[a-zA-Z0-9._]+\\]', 'gi');
+
+        const section = document.getElementById('section'),
+            template = document.getElementById('template');
+
+        section.innerHTML = interpolate(template.innerHTML, contenido);
+
+    </script>
+</body>
+
+</html>
