@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <title></title>
+    <link href="valerecepcionhacienda.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="a4" id="section"></section>
+
+    <script id="template" type="text/template">
+			<table>
+				<thead>
+					<tr>
+						<th colspan="10">
+							<h1>ESTABLECIMIENTO: {establecimiento}</h1>
+							<h3>CORRAL Nº <input type="text" class="head-input"> </h3>
+                            <h3>TROPA Nº <input type="text" class="head-input"> </h3>
+                            <h3>GUIA Nº <input type="text" class="head-input"> </h3>
+                            <h3>CERTIFICADO SELSA Nº <input type="text" class="head-input"> </h3>
+                            <h3>TOTAL ANIMALES DE LA TROPA <input type="text" class="head-input"></h3>
+                            <h3>TOTAL ANIMALES EN CORRAL <input type="text" class="head-input"></h3>
+                            <h3>FECHA INGRESO<input type="text" class="head-input"> </h3>
+						</th>
+                        <th colspan="10">
+							<h1>"ESTABLECIMIENTO: {establecimiento}"</h1>
+							<h3> Y Nº <input type="text" class="head-input"></h3>
+                            <h3> REMITENTE <input type="text" class="head-input"></h3>
+                            <h3>PROCEDENCIA <input type="text" class="head-input"></h3>
+                            <h3> C/E CF C/V <input type="text" class="head-input"></h3>
+                            <h3>TOTAL ANIMALES DE LA TROPA <input type="text" class="head-input"></h3>
+                            <h3>TOTAL ANIMALES EN CORRAL <input type="text" class="head-input"></h3>
+                            <h3>HORA <input type="text" value="35" class="head-input"></h3>
+						</th>    
+					</tr>
+                </thead>
+                <tbody>
+                    <tr >
+                        <td></td>
+                        <th colspan="2">ESPECIE</td>
+                        <td colspan="2"></td>
+                        <td colspan="2"></td>
+                        <th  colspan="5">CABEZAS</td>
+                        <th  colspan="2">KILOS</td>
+                        
+                    </tr>
+                    <tr >
+                        <td></td>
+                        <th colspan="2">VACUNA</td>
+                        <td  colspan="2"></td>
+                        <th  colspan="2">ILESOS</td>
+                        <td  colspan="5"></td>
+                        <td  colspan="2">BRUTO<input type="text" class="head-input"></td>
+                    </tr>
+                    <tr >
+                        <td></td>
+                        <th colspan="2">PORCINA</td>
+                        <td colspan="2"></td>
+                        <th colspan="2">CAIDOS</td>
+                        <td  colspan="5"></td>
+                        <td  colspan="2">TARA<input type="text" class="head-input"></td>
+                    </tr>
+                    <tr >
+                        <td></td>
+                        <th colspan="2">OVINA</td>
+                        <td colspan="2"></td>
+                        <th colspan="2">RENGOS</td>
+                        <td  colspan="5"></td>
+                        <td  colspan="2">NETO<input type="text" class="head-input"></td>
+                    </tr>
+                    <tr >
+                        <td></td>
+                        <td colspan="2"></td>
+                        <td colspan="2"></td>
+                        <th colspan="2">MUERTOS</td>
+                        <td  colspan="5"></td>
+                        <td  colspan="2"></td>
+                    </tr>
+                    <tr >
+                        <td></td>
+                        <td colspan="2"></td>
+                        <td colspan="2"></td>
+                        <th colspan="2">TOTAL</td>
+                        <td  colspan="5"></td>
+                        <td  colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2"></td>
+                        <td colspan="2"></td>
+                        <th colspan="2">TOTAL</td>
+                        <td  colspan="5"></td>
+                        <td  colspan="2"></td>
+                    </tr>
+                </tbody>	
+                <tfoot>
+                    <tr>
+                      <th colspan="10">CONFORME TRANSPORTISTA</th>
+                      <th colspan="10">CONFORME RECEPTOR</th>
+                    </tr>
+                    <tr>
+                        <td colspan="10"><input type="text" class="head-input"></td>
+                        <td colspan="10"><input type="text" class="head-input"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="10"></td>
+                        <th colspan="10">FRIGORIFICO Y MATADERO CHIVILCOY S.A</th>
+                    </tr>
+                </tfoot>		
+			</table>	
+		</script>
+
+    <script>
+        const contenido = {
+            establecimiento: 'FRIGORIFICO Y MATADERO CHIVILCOY SA',
+            direccion: 'RUTA5 KM 163.5',
+            fecha_desde: '22/02/2021',
+            fecha_hasta: '22/02/2021',
+            inspeccion: [
+                {
+                    contenido: [
+                        {
+                            fecha: "",
+                            hora: "",
+                            caidos: "",
+                            muertos: "",
+                            observacion: "",
+                            firma: "",
+                        }
+
+                    ],
+                    resumen: [
+                        {
+                            fecha: "",
+                            tropa: "",
+                            cabezas: "12.99",
+                            promedio: "12.99",
+                            kg_vivos: "12.99",
+                            kg_limpios: "12.99",
+                            rinde: "12.99"
+                        },
+                    ]
+                },
+            ]
+        }
+    </script>
+
+    <script>
+        function interpolate(template, data, prefix, history) {
+            prefix || (prefix = '');
+            history || (history = []);
+
+            history.push(data);
+
+            for (var name in data) {
+                interpolate.anyProp.lastIndex = 0;
+                interpolate.anyGroup.lastIndex = 0;
+                if (!interpolate.anyProp.test(template) && !interpolate.anyGroup.test(template)) {
+                    break;
+                }
+
+                if (typeof data[name] !== "object") {
+                    continue;
+                }
+
+                if (Array.isArray(data[name])) {
+                    template = template.replace(new RegExp('\\[' + name + '\\]([\\s\\S]*?)\\[\\/' + name + '\\]', 'gi'), function (match, template) {
+                        return data[name].map(function (data, staticIdx) {
+                            if (history.indexOf(data[name]) === -1) {
+                                return interpolate(template, data, prefix, history).replace(new RegExp('\\{:idx:\\}', 'gi'), staticIdx);
+                            }
+
+                            return template.replace(new RegExp('\\{:idx:\\}', 'gi'), staticIdx);
+                        })
+                            .join("");
+                    });
+
+                    continue;
+                }
+            }
+
+            for (var name in data) {
+                interpolate.anyProp.lastIndex = 0;
+                interpolate.anyGroup.lastIndex = 0;
+                if (!interpolate.anyProp.test(template) && !interpolate.anyGroup.test(template)) {
+                    break;
+                }
+
+                if (typeof data[name] === "object") {
+                    // Prevent circular references.
+                    if (history.indexOf(data[name]) === -1) {
+                        template = interpolate(template, data[name], (prefix ? prefix : '') + name + '\.', history);
+                    }
+
+                    continue;
+                }
+
+                template = template.replace(new RegExp('\\{' + prefix + name + '\\}', 'gi'), data[name]);
+            }
+
+            if (prefix === '') {
+                interpolate.anyProp.lastIndex = 0;
+                template = template.replace(interpolate.anyProp, '');
+            }
+
+            return template;
+        }
+
+        interpolate.anyProp = new RegExp('\\{[a-zA-Z0-9._]+\\}', 'gi');
+        interpolate.anyGroup = new RegExp('\\[[a-zA-Z0-9._]+\\]', 'gi');
+
+        const section = document.getElementById('section'),
+            template = document.getElementById('template');
+
+        section.innerHTML = interpolate(template.innerHTML, contenido);
+    </script>
+</body>
+
+</html>
