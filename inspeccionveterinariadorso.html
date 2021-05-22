@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <title></title>
+    <link href="inspeccionveterinaria.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="a4" id="section"></section>
+
+    <script id="template" type="text/template">
+			<table>
+				<thead>
+					<tr>
+						<th colspan="25">
+							<h1>ESTABLECIMIENTO: {establecimiento}</h1>
+						</th>
+					</tr>
+                    <tr>
+						<th class="text-center" colspan="25">MOVIMIENTO EN CORRAL</th>
+					</tr>
+					<tr>
+						<th>CANTIDAD ANIMALES</th>
+						<th>CANTIDAD FAENA</th>
+						<th>FECHA FAENA</th>
+						<th>OBSERVACION</th>
+                        <th>MUERTOS</th>
+						<th>CAIDOS</th>
+                        <th>REMANENTE</th>
+					</tr>
+				</thead>
+				<tbody>
+					[corral]
+						[contenido]
+						<tr>
+							<td>{cant_animales}</td>
+							<td>{cant_faena}</td>
+							<td>{fecha_faena}</td>
+							<td>{observacion}</td>
+                            <td>{muertos}</td>
+							<td>{caidos}</td>
+                            <td>{remanente}</td>
+						</tr>
+						[/contenido]
+					[/corral]
+				</tbody>				
+			</table>	
+		</script>
+
+    <script>
+        const contenido = {
+            establecimiento: 'FRIGORIFICO Y MATADERO CHIVILCOY SA',
+            direccion: 'RUTA5 KM 163.5',
+            fecha_desde: '22/02/2021',
+            fecha_hasta: '22/02/2021',
+            corral: [
+                {
+                    contenido: [
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+                        {
+                            cant_animales: "",
+                            cant_faena: "",
+                            fecha_faena: "",
+                            observacion: "",
+                            muertos: "",
+                            caidos: "",
+                            remanente: "",
+                        },
+
+                    ],
+                    resumen: [
+                        {
+                            fecha: "",
+                            tropa: "",
+                            cabezas: "12.99",
+                            promedio: "12.99",
+                            kg_vivos: "12.99",
+                            kg_limpios: "12.99",
+                            rinde: "12.99"
+                        },
+                    ]
+                },
+            ]
+        }
+    </script>
+
+    <script>
+        function interpolate(template, data, prefix, history) {
+            prefix || (prefix = '');
+            history || (history = []);
+
+            history.push(data);
+
+            for (var name in data) {
+                interpolate.anyProp.lastIndex = 0;
+                interpolate.anyGroup.lastIndex = 0;
+                if (!interpolate.anyProp.test(template) && !interpolate.anyGroup.test(template)) {
+                    break;
+                }
+
+                if (typeof data[name] !== "object") {
+                    continue;
+                }
+
+                if (Array.isArray(data[name])) {
+                    template = template.replace(new RegExp('\\[' + name + '\\]([\\s\\S]*?)\\[\\/' + name + '\\]', 'gi'), function (match, template) {
+                        return data[name].map(function (data, staticIdx) {
+                            if (history.indexOf(data[name]) === -1) {
+                                return interpolate(template, data, prefix, history).replace(new RegExp('\\{:idx:\\}', 'gi'), staticIdx);
+                            }
+
+                            return template.replace(new RegExp('\\{:idx:\\}', 'gi'), staticIdx);
+                        })
+                            .join("");
+                    });
+
+                    continue;
+                }
+            }
+
+            for (var name in data) {
+                interpolate.anyProp.lastIndex = 0;
+                interpolate.anyGroup.lastIndex = 0;
+                if (!interpolate.anyProp.test(template) && !interpolate.anyGroup.test(template)) {
+                    break;
+                }
+
+                if (typeof data[name] === "object") {
+                    // Prevent circular references.
+                    if (history.indexOf(data[name]) === -1) {
+                        template = interpolate(template, data[name], (prefix ? prefix : '') + name + '\.', history);
+                    }
+
+                    continue;
+                }
+
+                template = template.replace(new RegExp('\\{' + prefix + name + '\\}', 'gi'), data[name]);
+            }
+
+            if (prefix === '') {
+                interpolate.anyProp.lastIndex = 0;
+                template = template.replace(interpolate.anyProp, '');
+            }
+
+            return template;
+        }
+
+        interpolate.anyProp = new RegExp('\\{[a-zA-Z0-9._]+\\}', 'gi');
+        interpolate.anyGroup = new RegExp('\\[[a-zA-Z0-9._]+\\]', 'gi');
+
+        const section = document.getElementById('section'),
+            template = document.getElementById('template');
+
+        section.innerHTML = interpolate(template.innerHTML, contenido);
+    </script>
+</body>
+
+</html>
