@@ -81,36 +81,3 @@ th {
 .text-center {
     text-align: center;
 }
-
-.autorizacion {
-    border-top: 2px solid #000;
-    border-left: 1px solid rgb(255, 255, 255);
-    border-right: 1px solid rgb(255, 255, 255);
-    border-bottom: 1px solid rgb(255, 255, 255);
-    border-style: dotted;
-}
-
-.autorizacion th {
-    border-top: 2px solid #000;
-    border-left: 1px solid rgb(255, 255, 255);
-    border-right: 2px solid rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(255, 255, 255);
-    border-style: dotted;
-}
-
-.autorizacion td {
-    border-top: 2px solid rgb(255, 255, 255);
-    border-left: 1px solid rgb(255, 255, 255);
-    border-right: 2px solid #000;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    border-style: dotted;
-    padding: .5em;
-}
-
-tr>th:last-child {
-    border-right: none;
-}
-
-tr>td:last-child {
-    border-right: none;
-}
