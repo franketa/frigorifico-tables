@@ -63,6 +63,10 @@ th {
 tfoot td {
     border-top: none!important;
 }
+.main-body{
+    font-size: 14px;
+}
+
 tbody td {
     border:none!important;
     
