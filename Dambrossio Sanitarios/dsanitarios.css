@@ -1,0 +1,119 @@
+html, body {
+    font-size: 12px;
+}
+
+.a4 {
+    width: 210mm;
+    height: 297mm;
+    border: 1mm solid #000;
+    margin: 0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+h1 {
+    width: 100%;
+    border-bottom: 2px solid #000;
+    margin-top: 0;
+    text-align: left;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+
+h2 {
+    width: 100%;
+    margin-top: 0;
+    text-align: left;
+    font-size: 1em;
+    margin-bottom: .5em;
+}
+
+h3 {
+    width: 100%;
+    margin-top: 0;
+    text-align: left;
+    font-size: .9em;
+    margin-bottom: .5em;
+}
+
+h4 {
+    width: 100%;
+    margin-top: 0;
+    text-align: left;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+td {
+    border: 1px solid #000;
+    padding: 1em;
+}
+
+th {
+    border: 1px solid #000;
+    padding: 1em;
+    text-align: left;
+}
+
+tfoot td {
+    border-top: none!important;
+}
+tbody td {
+    border:none!important;
+    
+}
+tbody .h-input {
+    width: 100%!important;
+}
+.second-body td{
+    border: 1px solid #000!important;
+    padding: 1em;
+}
+
+.h-input {
+    border-top: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid #000;
+    width: 50%;
+}
+.fecha-h3{
+width: 50%;
+}
+.fecha-input {
+    width: 50%;
+}
+
+.th2 .head-input {
+    width: 35%;
+}
+
+.footer-input {
+    border-top: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    border-bottom: 2px solid #000;
+    border-style: dotted;
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mayusculas {
+    text-transform: uppercase;
+}
+
+
+.logo{
+    width: 250px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+}
+

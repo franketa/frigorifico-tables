@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <title></title>
+    <link href="dsanitarios.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="a4" id="section"></section>
+
+    <script id="template" type="text/template">
+			<table>
+				<thead>
+					<tr>
+						<th  class="mayusculas ">
+                            <a><img class="logo" src="./logo-dambro.png"></a>
+                            <h3 class="text-center">TODO PARA LA INSTALACION SANITARIA</h3>
+                            <h3 class="text-center">AGUA Y GAS NATURAL</h3>
+                            <h4 class="text-center">Av. Mitre 330 - Chivilcoy - Tel: 2346-565868</h4>
+                            <h4 class="text-center">info@dambrosio.com</h4>
+                            <h4 class="text-center">I.V.A Responsable Inscripto</h4>
+						</th>
+                        <th  class="mayusculas">
+							<h1>RECIBO PROVISORIO</h1>
+                            <h2>Nº {recibo_n} - {id_n} </h2>
+                            <h3>C.U.I.T <input type="text" class="h-input"> </h3>
+                            <h3>Ing. Brutos:<input type="text" class="h-input"></h3>
+                            <h3>Fecha Inicio: <input type="text" class="h-input"></h3>
+                            <br>
+                            <h3>______//______//_________</h3>
+						</th>
+                        
+					</tr>
+                </thead>
+                <tbody>
+                    <tr >
+                        <td >Señor/ es: <input type="text" class="h-input"></td>
+                        <td>Domicilio: <input type="text" class="h-input"></td>
+                    </tr>
+                    <tr >
+                        <td colspan="2">Localidad: <input type="text" class="h-input"></td>
+                    </tr>
+                    <tr >
+                        <td>I.V.A: <input type="text" class="h-input"></td>
+                        <td>CUIT: <input type="text" class="h-input"></td>
+                    </tr>
+                    <tr >
+                        <td colspan="2">Recibí la suma de Pesos: <input type="text" class="h-input"></td>
+
+                    </tr>
+                    <tr >
+                        <td colspan="2">en concepto de: <input type="text" class="h-input"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                        <table>
+                            <thead>
+                                <th>BANCO</th>
+                                <th>CHQUE N</th>
+                                <th>LOCALIDAD</th>
+                                <th>IMPORTE</th>
+                            </thead>
+                            <tbody class="second-body">
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Nº de Factura</td>
+                                    <td colspan="1">TOTAL CHEQUES</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" rowspan="3"></td>
+                                    <td>EN EFECTIVO</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>IMPORTE TOTAL</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    </tr>
+                    
+                </tbody>	
+                <tfoot>
+                    <tr>
+                      <th >Firma</th>
+                      <th >Aclaracion</th>
+                    </tr>
+                    <tr>
+                        <td ><input type="text" class="footer-input"></td>
+                        <td ><input type="text" class="footer-input"></td>
+                    </tr>
+                </tfoot>		
+			</table>	
+		</script>
+
+    <script>
+        const contenido = {
+            establecimiento: 'FRIGORIFICO Y MATADERO CHIVILCOY SA',
+            recibo_n: '0001',
+            id_n: '00002150',
+            direccion: 'RUTA5 KM 163.5',
+            vale: [
+                {
+                    contenido: [
+                        {
+                            fecha: "",
+                            hora: "",
+                            caidos: "",
+                            muertos: "",
+                            observacion: "",
+                            firma: "",
+                        }
+
+                    ],
+                    resumen: [
+                        {
+                            fecha: "",
+                            tropa: "",
+                            cabezas: "12.99",
+                            promedio: "12.99",
+                            kg_vivos: "12.99",
+                            kg_limpios: "12.99",
+                            rinde: "12.99"
+                        },
+                    ]
+                },
+            ]
+        }
+    </script>
+
+    <script>
+        function interpolate(template, data, prefix, history) {
+            prefix || (prefix = '');
+            history || (history = []);
+
+            history.push(data);
+
+            for (var name in data) {
+                interpolate.anyProp.lastIndex = 0;
+                interpolate.anyGroup.lastIndex = 0;
+                if (!interpolate.anyProp.test(template) && !interpolate.anyGroup.test(template)) {
+                    break;
+                }
+
+                if (typeof data[name] !== "object") {
+                    continue;
+                }
+
+                if (Array.isArray(data[name])) {
+                    template = template.replace(new RegExp('\\[' + name + '\\]([\\s\\S]*?)\\[\\/' + name + '\\]', 'gi'), function (match, template) {
+                        return data[name].map(function (data, staticIdx) {
+                            if (history.indexOf(data[name]) === -1) {
+                                return interpolate(template, data, prefix, history).replace(new RegExp('\\{:idx:\\}', 'gi'), staticIdx);
+                            }
+
+                            return template.replace(new RegExp('\\{:idx:\\}', 'gi'), staticIdx);
+                        })
+                            .join("");
+                    });
+
+                    continue;
+                }
+            }
+
+            for (var name in data) {
+                interpolate.anyProp.lastIndex = 0;
+                interpolate.anyGroup.lastIndex = 0;
+                if (!interpolate.anyProp.test(template) && !interpolate.anyGroup.test(template)) {
+                    break;
+                }
+
+                if (typeof data[name] === "object") {
+                    // Prevent circular references.
+                    if (history.indexOf(data[name]) === -1) {
+                        template = interpolate(template, data[name], (prefix ? prefix : '') + name + '\.', history);
+                    }
+
+                    continue;
+                }
+
+                template = template.replace(new RegExp('\\{' + prefix + name + '\\}', 'gi'), data[name]);
+            }
+
+            if (prefix === '') {
+                interpolate.anyProp.lastIndex = 0;
+                template = template.replace(interpolate.anyProp, '');
+            }
+
+            return template;
+        }
+
+        interpolate.anyProp = new RegExp('\\{[a-zA-Z0-9._]+\\}', 'gi');
+        interpolate.anyGroup = new RegExp('\\[[a-zA-Z0-9._]+\\]', 'gi');
+
+        const section = document.getElementById('section'),
+            template = document.getElementById('template');
+
+        section.innerHTML = interpolate(template.innerHTML, contenido);
+    </script>
+</body>
+
+</html>
